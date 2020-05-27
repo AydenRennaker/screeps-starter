@@ -1,0 +1,17 @@
+{
+  "name": "screeps-starter-codebase",
+  "devDependencies": {
+    "grunt": "1.0.1",
+    "grunt-cli": "1.2.0",
+    "grunt-screeps": "1.3.0",
+    "grunt-contrib-copy": "1.0.0",
+    "lodash": "^3.10.1",
+    "matchdep": "2.0.0",
+    "module-concat": "^2.1.0",
+    "git-describe": "4.0.2"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.153",
+    "@types/screeps": "^3.1.2"
+  }
+}
