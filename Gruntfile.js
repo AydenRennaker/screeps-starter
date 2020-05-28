@@ -25,7 +25,7 @@ module.exports = function (grunt) {
 				filter:  'isFile',
 				cwd:     'dist/',
 				src:     '**',
-				dest:    'C:/Users/Ayden Rennaker/AppData/Local/Screeps/scripts/127_0_0_1___21025/default'
+				dest:    'Update This Path'
 			},
 		},
 	});
