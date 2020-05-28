@@ -25,7 +25,7 @@ module.exports = function (grunt) {
 				filter:  'isFile',
 				cwd:     'dist/',
 				src:     '**',
-				dest:    'CHANGE_ME:PATH_TO_STEAM_CLIENT`S_SCRIPT_FOLDER'
+				dest:    'C:/Users/Ayden Rennaker/AppData/Local/Screeps/scripts/127_0_0_1___21025/default'
 			},
 		},
 	});

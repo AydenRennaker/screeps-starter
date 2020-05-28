@@ -1,23 +1,22 @@
-var roles = require('./creeps');
+let creepLogic = require('./creeps');
+let roomLogic = require('./room');
+let prototypes = require('./prototypes');
+
 
 module.exports.loop = function () {
-    var harvesters = _.filter(Game.creeps, (creep) => creep.memory.role == 'harvester');
-    console.log('Harvesters: ' + harvesters.length);
+    // make a list of all of our rooms
+    Game.myRooms = _.filter(Game.rooms, r => r.controller && r.controller.level > 0 && r.controller.my);
 
-    if (harvesters.length < 2) {
-        var newName = 'Harvester' + Game.time;
-        let result = Game.spawns['Spawn1'].spawnCreep([WORK, CARRY, MOVE], newName, {memory: {role: 'harvester'}});
-
-        console.log('Spawning new Harvester:', newName, result);
-    }
+    // run spwan logic for each room in our empire
+    _.forEach(Game.myRooms, r => roomLogic.spawning(r));
     
     // run each creep role see /creeps/index.js
     for(var name in Game.creeps) {
         var creep = Game.creeps[name];
 
         let role = creep.memory.role;
-        if (roles[role]) {
-            roles[role].run(creep);
+        if (creepLogic[role]) {
+            creepLogic[role].run(creep);
         }
     }
 

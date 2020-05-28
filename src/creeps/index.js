@@ -1,6 +1,6 @@
-let roles = {
+let creepLogic = {
     harvester:     require('./harvester'),
     upgrader:      require('./upgrader'),
 }
 
-module.exports = roles;
+module.exports = creepLogic;
