@@ -36,4 +36,7 @@ var harvester = {
     }
 };
 
+const creepLogic = require('index');
+creepLogic.register('harvester', harvester);
+
 module.exports = harvester;

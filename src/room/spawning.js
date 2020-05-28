@@ -1,5 +1,5 @@
 let creepLogic = require("../creeps/index");
-let creepTypes = _.keys(creepLogic);
+let creepTypes = creepLogic.getAllKeys();
 
 function spawnCreeps(room) {
 
@@ -8,11 +8,11 @@ function spawnCreeps(room) {
 
     // find a creep type that returns true for the .spawn() function
     let creepTypeNeeded = _.find(creepTypes, function(type) {
-        return creepLogic[type].spawn(room);
+        return creepLogic.get(type).spawn(room);
     });
 
     // get the data for spawning a new creep of creepTypeNeeded
-    let creepSpawnData = creepLogic[creepTypeNeeded] && creepLogic[creepTypeNeeded].spawnData(room);
+    let creepSpawnData = creepLogic.get(creepTypeNeeded) && creepLogic.get(creepTypeNeeded).spawnData(room);
     console.log(room, JSON.stringify(creepSpawnData));
 
     if (creepSpawnData) {

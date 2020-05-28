@@ -33,4 +33,7 @@ var roleUpgrader = {
     }
 };
 
+const creepLogic = require('index');
+creepLogic.register('upgrader', roleUpgrader);
+
 module.exports = roleUpgrader;
