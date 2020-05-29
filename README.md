@@ -12,7 +12,9 @@ In Gruntfile.js introduce your username/password for screeps.
 ### Install npm modules
 
 $ npm install
+$ npm install -g grunt-cli
 
+You may have to install grunt with the -g for Global which sets an enviorment path variable. Otherwise it may say something about grunt not being found.
 
 ## Usage
 
